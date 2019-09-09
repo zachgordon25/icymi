@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  before_action :set_artist, only: [:show, :edit, :create, :update, :destroy]
+  before_action :set_artist, only: [:show, :edit, :update, :destroy]
 
   # GET /artists
   # GET /artists.json
@@ -13,9 +13,9 @@ class ArtistsController < ApplicationController
   end
 
   # GET /artists/new
-  def new
-    @artist = Artist.new
-  end
+  # def new
+  #   @artist = Artist.new
+  # end
 
   # GET /artists/1/edit
   # def edit
@@ -23,19 +23,19 @@ class ArtistsController < ApplicationController
 
   # POST /artists
   # POST /artists.json
-  # def create
-  #   @artist = Artist.new(artist_params)
+  def create
+    @artist = Artist.new(artist_params)
 
-  #   respond_to do |format|
-  #     if @artist.save
-  #       format.html { redirect_to @artist, notice: 'Artist was successfully created.' }
-  #       format.json { render :show, status: :created, location: @artist }
-  #     else
-  #       format.html { render :new }
-  #       format.json { render json: @artist.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+    respond_to do |format|
+      if @artist.save
+        format.html { redirect_to @artist, notice: 'Artist was successfully created.' }
+        format.json { render :show, status: :created, location: @artist }
+      else
+        format.html { render :new }
+        format.json { render json: @artist.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # # PATCH/PUT /artists/1
   # # PATCH/PUT /artists/1.json
