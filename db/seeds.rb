@@ -11,3 +11,5 @@ Artist.create(name: "KISS", img: "https://www.rollingstone.com/wp-content/upload
 Artist.create(name: "Alice Cooper", img: "https://www.biography.com/.image/t_share/MTE5NDg0MDU1MzgyNDkyNjg3/portrait-of-alice-cooper-in--makeup.jpg")
 Artist.create(name: "Guns n Roses", img: "https://cdn.ontourmedia.io/gunsnroses/site_v2/animations/gnr_loop_logo_01.jpg")
 Artist.create(name: "The Rolling Stones", img: "https://yt3.ggpht.com/a/AGF-l7-n03HoZcEKQJ0raP5rKQvY02N5-Bpfg6K_YQ=s900-c-k-c0xffffffff-no-rj-mo")
+
+Show.create(location: "Hard Rock Stadium, Miami Gardens, FL, USA ", date: "August 30, 2019", img: "https://www.eventtravel.com/upload/images/concerts_2019/rolling-stone-582.jpg", artist_id: 5 )

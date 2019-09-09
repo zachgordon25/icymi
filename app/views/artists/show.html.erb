@@ -1,14 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @artist.name %>
-</p>
+<h1> <%=@artist.name%> </h1>
 
-<p>
-  <strong>Img:</strong>
-  <%= @artist.img %>
-</p>
+<h1>Shows:</h1>
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
+  <h1> <%= @artist.shows[0].location %> </h1>
+  <img src="<%= @artist.shows[0].img %>">
+
+
 <%= link_to 'Back', artists_path %>
