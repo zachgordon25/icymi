@@ -11,8 +11,8 @@ class ArtistsController < ApplicationController
   # GET /artists/1.json
   def show
     # @artist = Artist.find(params[:id])
-    shows = @artist.shows[0]
-    # {
+    @shows = Show.all
+    # render json: {
     #   artist: @artist,
     #   shows: shows
     # }

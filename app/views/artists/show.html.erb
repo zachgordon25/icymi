@@ -2,10 +2,11 @@
 
 <h1> <%=@artist.name%> </h1>
 
+<%shows = @artist.shows%>
+
 <h1>Shows:</h1>
-
-  <h1> <%= @artist.shows[0].location %> </h1>
-  <img src="<%= @artist.shows[0].img %>">
-
-
+<% @shows.each do |shows| %>
+<h1> <%= shows.location %> </h1>
+  <img src="<%= shows.img %>">
+<% end %>
 <%= link_to 'Back', artists_path %>
