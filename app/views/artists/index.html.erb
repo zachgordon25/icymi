@@ -2,10 +2,14 @@
 
 <h1>Artists</h1>
   
+<div class= "flex-container">
     <% @artists.each do |artist| %>
+        <div class= "card">
         <a href="/artists/<%=artist.id%>/shows"/>
         <h1><%=artist.name%></h1>
         <img src=<%=artist.img%>>
         </a>
+        </div>
     <%end%>
+    </div>
 

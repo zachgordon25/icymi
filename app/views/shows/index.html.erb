@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-    <h1>*Artist's name here*</h1>
+    <h1><strong>*Artist's name here*</strong></h1>
 
+    <div class= "container">
     <% @shows.each do |show| %>
         <h2><%= show.location %></h2>
         <h3><%= show.date %></h3>
         <img src="<%= show.img %>">
-    <% end %>
-        
+        <% end %>
+    </div>
+
         <br>
         <%= link_to 'Back', artists_path %>
         <%= link_to 'Show', artist_shows_url %>

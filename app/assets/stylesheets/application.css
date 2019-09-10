@@ -14,8 +14,32 @@
  *= require_self
  */
 
-a,
-a:visited {
+a {
   color: black;
-  text-decoration: none;
+}
+
+img {
+  height: 300px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  outline: 1px solid gray;
+}
+
+.flex-container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 400px;
+  justify-content: space-evenly;
+}
+
+.card {
+  margin-top: 20px;
+  margin-bottom: 7px;
+  border: 1px solid gray;
+  text-align: center;
 }
