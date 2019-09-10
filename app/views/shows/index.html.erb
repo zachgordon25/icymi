@@ -1,31 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Shows</h1>
+    <h1>*Artist's name here*</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Location</th>
-      <th>Date</th>
-      <th>Img</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% puts @show %>
     <% @shows.each do |show| %>
-      <tr>
-        <td><%= show.location %></td>
-        <td><%= show.date %></td>
-        <td><%= show.img %></td>
-        <td><%= link_to 'Show', artist_shows_url %></td>
-
-      </tr>
+        <h2><%= show.location %></h2>
+        <h3><%= show.date %></h3>
+        <img src="<%= show.img %>">
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Show', new_artist_show_path %>
+        
+        <br>
+        <%= link_to 'Back', artists_path %>
+        <%= link_to 'Show', artist_shows_url %>
