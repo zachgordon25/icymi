@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Artists</h1>
+    <h1><big>In Case You Missed It</big></h1>
+
+    <%-#<h2>Artists</h2> %>
   
-<div class= "flex-container">
-    <% @artists.each do |artist| %>
+    <div class= "flex-container">
+        <% @artists.each do |artist| %>
         <div class= "card">
-        <a href="/artists/<%=artist.id%>/shows"/>
-        <h1> <%=artist.name%> </h1>
-        <img src=<%=artist.img%> >
-        </a>
+            <a href="/artists/<%=artist.id%>/shows"/>
+            <h2> <%=artist.name%> </h2>
+            <img src=<%=artist.img%> >
+            </a>
         </div>
     <%end%>
     </div>

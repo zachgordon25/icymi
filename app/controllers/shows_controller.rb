@@ -4,9 +4,8 @@ class ShowsController < ApplicationController
   # GET /shows
   # GET /shows.json
   def index
-    @shows = Show.where("artist_id = #{(params[:artist_id])}")
-    @artist = Artist.where("id = #{(params[:id])}")
-    # puts "The artist is #{@artist.name}"
+    @artist = Artist.find(params[:artist_id])
+    @shows = Show.where("artist_id = #{params[:artist_id]}")
   end
 
   # GET /shows/1
