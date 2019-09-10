@@ -4,12 +4,13 @@ class ShowsController < ApplicationController
   # GET /shows
   # GET /shows.json
   def index
-    @shows = Show.all
+    @shows = Show.where("artist_id = #{(params[:artist_id])}")
   end
 
   # GET /shows/1
   # GET /shows/1.json
   def show
+    @shows = Show.find(params[:id])
   end
 
   # GET /shows/new

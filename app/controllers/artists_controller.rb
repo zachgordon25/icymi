@@ -11,12 +11,9 @@ class ArtistsController < ApplicationController
   # GET /artists/1.json
   def show
     # @artist = Artist.find(params[:id])
-    @shows = Show.all
-    # render json: {
-    #   artist: @artist,
-    #   shows: shows
-    # }
-    # render json: {artist: @artist, shows: shows}
+    # @artist = Artist.all
+    # @shows = Show.find(params[:id])
+    # @shows = Show.all
   end
 
   # GET /artists/new

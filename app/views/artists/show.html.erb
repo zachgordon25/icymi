@@ -5,8 +5,9 @@
 <%shows = @artist.shows%>
 
 <h1>Shows:</h1>
-<% @shows.each do |shows| %>
-<h1> <%= shows.location %> </h1>
-  <img src="<%= shows.img %>">
+<% @shows.each do |show| %>
+<h2> <%= show.location %> </h2>
+<h4> <%= show.date %> </h4>
+  <img src="<%= show.img %>" >
 <% end %>
 <%= link_to 'Back', artists_path %>
