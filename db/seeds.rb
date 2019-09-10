@@ -13,3 +13,7 @@ Artist.create(name: "Guns n Roses", img: "https://cdn.ontourmedia.io/gunsnroses/
 Artist.create(name: "The Rolling Stones", img: "https://yt3.ggpht.com/a/AGF-l7-n03HoZcEKQJ0raP5rKQvY02N5-Bpfg6K_YQ=s900-c-k-c0xffffffff-no-rj-mo")
 
 Show.create(location: "Hard Rock Stadium, Miami Gardens, FL, USA ", date: "August 30, 2019", img: "https://www.eventtravel.com/upload/images/concerts_2019/rolling-stone-582.jpg", artist_id: 5 )
+
+Artist.find(7).shows.create(location:"Forum de Montréal, Montreal, QC, Canada", date:"February 21, 1986", img:"https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Benasev.jpg/220px-Benasev.jpg")
+
+Artist.create(name: "Pat Benatar", img: "https://artist-assets.hubbardradio.com/pat-benatar-1_v1000.jpg")
