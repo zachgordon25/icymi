@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+
+<% 
+require 'httparty'
+%>
+
 <p>
   <strong>Location:</strong>
   <%= @show.location %>
@@ -10,10 +15,16 @@
   <%= @show.date %>
 </p>
 
-<p>
-  <strong>Img:</strong>
-  <%= @show.img %>
-</p>
+<%response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/setlists?artistName=#{@artist.name}&date=#{@show.date}&p=1",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'})
+parsed_json = ActiveSupport::JSON.decode(response.body)
+puts "RESPONSE: #{response.body}" %>
 
+<% setlist = parsed_json["setlist"][0]["sets"]["set"][0]["song"]%> 
+<h3>Setlist</h3>
+<%parsed_json["setlist"][0]["sets"]["set"].each do |set|%>
+<%for i in 0 ... setlist.length %>
+<li><%= parsed_json["setlist"][0]["sets"]["set"][0]["song"][i]["name"] %></li>
+<%end%>
+<%end%>
 
 <%= link_to 'Back', artists_path %>

@@ -4,27 +4,7 @@
 <%-# link_to 'Back', artists_path %>
 
 
-<% 
-require 'httparty'
-%>
 
-<%response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/setlists?artistName=#{@artist.name}&date=#{@shows[0].date}&p=1",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'})
-parsed_json = ActiveSupport::JSON.decode(response.body)
-puts "RESPONSE: #{response.body}" %>
-
-<% setlist = parsed_json["setlist"][0]["sets"]["set"][0]["song"]%>
-<% encore = parsed_json["setlist"][0]["sets"]["set"][1]["song"]%>
-
-<h3>Setlist</h3>
- <%for i in 0 ... setlist.length %>
-<li><%= parsed_json["setlist"][0]["sets"]["set"][0]["song"][i]["name"] %></li>
-<%end%>
-
-<h3>Encore</h3>
-
-<%for i in 0 ... encore.length %>
-<li><%= parsed_json["setlist"][0]["sets"]["set"][1]["song"][i]["name"] %></li>
-<%end%>
 
 <div class= "container">
 
@@ -40,12 +20,12 @@ puts "RESPONSE: #{response.body}" %>
         <div class="concerts">
     <h2><%= show.location %></h2>
     <h3><%= show.date %></h3>
-    <img src="<%= show.img %>">
+    <img src="<%= show.img %>"></a>
     </div>
     </div>
     <% end %>
     <%puts "The artist is #{@artist.name}"%>
+    <% link_to 'Show', artist_shows_url %>
     </div>
 
         <br>
-        <%-# link_to 'Show', artist_shows_url %>
