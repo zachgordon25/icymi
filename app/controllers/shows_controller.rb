@@ -11,6 +11,8 @@ class ShowsController < ApplicationController
   # GET /shows/1
   # GET /shows/1.json
   # def show
+  #   shows = Show.all
+  #   render json: {shows: shows}
   #   @shows = Show.find(params[:id])
   # end
 

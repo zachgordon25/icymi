@@ -3,14 +3,17 @@
 
 <%-# link_to 'Back', artists_path %>
 
+
+<div class= "container">
+
 <nav>
 <h1><strong><%= @artist.name %></strong></h1>
 <a href="/artists"><button type="button" class="btn btn-primary">back</button></a>
 </nav>
 
-    <div class= "container">
-
 <% @shows.each do |show| %>
+ <br>
+ 
     <div class="all-concerts">
         <div class="concerts">
     <h2><%= show.location %></h2>
@@ -18,9 +21,7 @@
     <img src="<%= show.img %>">
         </div>
     </div>
-        <br>
 <% end %>
-
     </div>
 
         <br>
