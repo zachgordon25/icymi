@@ -4,9 +4,27 @@
 <%-# link_to 'Back', artists_path %>
 
 
-<% require 'httparty'
-response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/artists?artistName=#{@artist.name}&p=1&sort=relevance",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'})
-puts "RESPONSE!!!!: #{response.body}" %>
+<% 
+require 'httparty'
+%>
+
+<%response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/setlists?artistName=#{@artist.name}&date=#{@shows[0].date}&p=1",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'})
+parsed_json = ActiveSupport::JSON.decode(response.body)
+puts "RESPONSE: #{response.body}" %>
+
+<% setlist = parsed_json["setlist"][0]["sets"]["set"][0]["song"]%>
+<% encore = parsed_json["setlist"][0]["sets"]["set"][1]["song"]%>
+
+<h3>Setlist</h3>
+ <%for i in 0 ... setlist.length %>
+<li><%= parsed_json["setlist"][0]["sets"]["set"][0]["song"][i]["name"] %></li>
+<%end%>
+
+<h3>Encore</h3>
+
+<%for i in 0 ... encore.length %>
+<li><%= parsed_json["setlist"][0]["sets"]["set"][1]["song"][i]["name"] %></li>
+<%end%>
 
 <div class= "container">
 

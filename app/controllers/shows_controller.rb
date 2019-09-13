@@ -10,10 +10,7 @@ class ShowsController < ApplicationController
 
   # GET /shows/1
   # GET /shows/1.json
-  # def show
-  #   shows = Show.all
-  #   render json: {shows: shows}
-  #   @shows = Show.find(params[:id])
+  #   @show = Show.find(params[:id])
   # end
 
   # GET /shows/new
@@ -27,19 +24,19 @@ class ShowsController < ApplicationController
 
   # POST /shows
   # POST /shows.json
-  def create
-    @show = Show.new(show_params)
+  # def create
+  #   @show = Show.new(show_params)
 
-    respond_to do |format|
-      if @show.save
-        format.html { redirect_to @show, notice: 'Show was successfully created.' }
-        format.json { render :show, status: :created, location: @show }
-      else
-        format.html { render :new }
-        format.json { render json: @show.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @show.save
+  #       format.html { redirect_to @show, notice: 'Show was successfully created.' }
+  #       format.json { render :show, status: :created, location: @show }
+  #     else
+  #       format.html { render :new }
+  #       format.json { render json: @show.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # PATCH/PUT /shows/1
   # PATCH/PUT /shows/1.json
