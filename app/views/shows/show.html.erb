@@ -5,6 +5,14 @@
 require 'httparty'
 %>
 
+<%response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/setlists?artistName=#{@artist.name}&date=#{@show.date}&p=1",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'})
+parsed_json = ActiveSupport::JSON.decode(response.body)
+puts "RESPONSE: #{response.body}" %>
+
+<h1><%=@artist.name%></h1>
+
+<h2><%= parsed_json["setlist"][0]["venue"]["name"]%></h2>
+
 <p>
   <strong>Location:</strong>
   <%= @show.location %>
@@ -15,9 +23,7 @@ require 'httparty'
   <%= @show.date %>
 </p>
 
-<%response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/setlists?artistName=#{@artist.name}&date=#{@show.date}&p=1",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'})
-parsed_json = ActiveSupport::JSON.decode(response.body)
-puts "RESPONSE: #{response.body}" %>
+
 
 <% setlist = parsed_json["setlist"][0]["sets"]["set"][0]["song"]%> 
 <h3>Setlist</h3>
