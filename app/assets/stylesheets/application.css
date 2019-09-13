@@ -14,20 +14,36 @@
  *= require_self
  */
 
-a {
-  color: black;
+.container {
+  text-align: center;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  /* color: black; */
 }
 
 img {
-  height: 300px;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   outline: 1px solid gray;
+  width: 300px;
+  height: 300px;
 }
 
-.flex-container {
+nav {
+  display: flex;
+}
+
+.btn-primary {
+  margin-left: 20px;
+}
+
+.flex-container,
+.all-concerts {
   display: flex;
   width: 90%;
   margin: auto;

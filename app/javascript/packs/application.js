@@ -18,21 +18,21 @@ import axios from 'axios';
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-const setlist = async () => {
-  console.log('setlist is running');
-  const response = await axios({
-    method: 'GET',
-    url:
-      'https://api.setlist.fm/rest/1.0/search/artists?artistName=kiss&p=1&sort=relevance',
-    headers: {
-      Accept: 'application/json',
-      'x-api-key': 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L'
-    }
-  });
-  const data = response.data;
-  console.log(data);
-};
-setlist();
+// const setlist = async () => {
+//   console.log('setlist is running');
+//   const response = await axios({
+//     method: 'GET',
+//     url:
+//       'https://api.setlist.fm/rest/1.0/search/artists?artistName=kiss&p=1&sort=relevance',
+//     headers: {
+//       Accept: 'application/json',
+//       'x-api-key': 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L'
+//     }
+//   });
+//   const data = response.data;
+//   console.log(data);
+// };
+// setlist();
 
 // const youtube = async () => {
 //   console.log('youtube is running');

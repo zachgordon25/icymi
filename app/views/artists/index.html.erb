@@ -1,11 +1,9 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+    <h1><big><strong>In Case You Missed It</strong></big></h1>
 
-    <h1><big>In Case You Missed It</big></h1>
-
-    <%-#<h2>Artists</h2> %>
-  
     <div class= "flex-container">
-        
+    
     <% @artists.sort_by{|artist| artist.name}.each do |artist| %>
         <div class= "card">
             <a href="/artists/<%=artist.id%>/shows"/>
@@ -14,5 +12,6 @@
             </a>
         </div>
             <%end%>
+    </div>
     </div>
 

@@ -1,15 +1,27 @@
 <p id="notice"><%= notice %></p>
     
+
+<%-# link_to 'Back', artists_path %>
+
+<nav>
 <h1><strong><%= @artist.name %></strong></h1>
+<a href="/artists"><button type="button" class="btn btn-primary">back</button></a>
+</nav>
 
     <div class= "container">
-    <% @shows.each do |show| %>
-        <h2><%= show.location %></h2>
-        <h3><%= show.date %></h3>
-        <img src="<%= show.img %>">
-        <% end %>
+
+<% @shows.each do |show| %>
+    <div class="all-concerts">
+        <div class="concerts">
+    <h2><%= show.location %></h2>
+    <h3><%= show.date %></h3>
+    <img src="<%= show.img %>">
+        </div>
+    </div>
+        <br>
+<% end %>
+
     </div>
 
         <br>
-        <%= link_to 'Back', artists_path %>
         <%-# link_to 'Show', artist_shows_url %>
