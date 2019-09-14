@@ -3,8 +3,22 @@
 
 <%-# link_to 'Back', artists_path %>
 
+<% 
+require 'httparty'
+%>
 
+<%response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/setlists?artistName=#{@artist.name}&p=1",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'})
+parsed_json = ActiveSupport::JSON.decode(response.body)
+puts "RESPONSE: #{response.body}" %>
 
+<%concert = parsed_json["setlist"]%>
+
+<%concert.each do |concert|%>
+    <ul>
+        <li><%=concert["venue"]["name"]%></li>
+        <li><%=concert["eventDate"]%></li>
+    </ul>
+<%end%>
 
 <div class= "container">
 
@@ -12,6 +26,8 @@
 <h1><strong><%= @artist.name %></strong></h1>
 <a href="/artists"><button type="button" class="btn btn-primary">back</button></a>
 </nav>
+
+
 
 <% @shows.each do |show| %>
  <br>
