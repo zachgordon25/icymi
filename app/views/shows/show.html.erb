@@ -29,9 +29,9 @@ puts "RESPONSE: #{response.body}" %>
 <h3>Setlist</h3>
 <%parsed_json["setlist"][0]["sets"]["set"].each do |set|%>
 <%for i in 0 ... setlist.length %>
-  <ol>
+  <ul>
     <li><%= parsed_json["setlist"][0]["sets"]["set"][0]["song"][i]["name"] %></li>
-  </ol>
+  </ul>
 <%end%>
 <%end%>
 Source: <a href="<%=parsed_json["setlist"][0]["url"]%>" target="_blank"> This setlist on setlist.fm </a>

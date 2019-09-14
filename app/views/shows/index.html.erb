@@ -34,14 +34,16 @@ puts "RESPONSE: #{response.body}" %>
  
     <div class="all-concerts">
         <div class="concerts">
+        <a href="/artists/<%=@artist.id%>/shows/<%=show.id%>">
     <h2><%= show.location %></h2>
     <h3><%= show.date %></h3>
     <img src="<%= show.img %>"></a>
+    </a>
     </div>
     </div>
     <% end %>
     <%puts "The artist is #{@artist.name}"%>
-    <% link_to 'Show', artist_shows_url %>
     </div>
-
-        <br>
+    
+    <br>
+    <% link_to 'Show', artist_shows_url %>
