@@ -63,3 +63,7 @@ nav {
   border: 1px solid gray;
   text-align: center;
 }
+
+.song-list {
+  list-style-type: none;
+}

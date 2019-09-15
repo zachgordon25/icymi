@@ -31,7 +31,7 @@ puts "RESPONSE: #{response.body}" %>
 <%parsed_json["setlist"][0]["sets"]["set"].each do |set|%>
 <%for i in 0 ... setlist.length %>
   <ul>
-    <li><%= parsed_json["setlist"][0]["sets"]["set"][0]["song"][i]["name"] %></li>
+    <li class="song-list"><%="#{i + 1}. "%><%= parsed_json["setlist"][0]["sets"]["set"][0]["song"][i]["name"] %></li>
   </ul>
 <%end%>
 <%end%>
