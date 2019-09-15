@@ -34,12 +34,16 @@ data = ActiveSupport::JSON.decode(response.body)%>
   <%for j in 0 ... sets.length%>
     <% setlist = data["setlist"][0]["sets"]["set"][j]["song"]%> 
     <%puts sets.length%>
-
   <%for i in 0 ... setlist.length %>
       <ul>
         <li class="song-list"><%="#{i + 1}. "%><%= setlist[i]["name"] %></li>
       </ul>
+      
     <%end%>
+    <%if sets.length > 1%>
+    <h3>Encore</h3>
+  <%end%>
+    
 
 <%end%>
 <p class="test">
