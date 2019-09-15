@@ -8,12 +8,12 @@ require 'httparty'
 
 
 <%response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/setlists?artistName=#{@artist.name}&date=#{@show.date}&p=1&venueName=#{@show.venue}",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'})
-parsed_json = ActiveSupport::JSON.decode(response.body)
+data = ActiveSupport::JSON.decode(response.body)
 puts "RESPONSE: #{response.body}" %>
 
 <h1><%=@artist.name%></h1>
 
-<h2><%= parsed_json["setlist"][0]["venue"]["name"]%></h2>
+<h2><%= data["setlist"][0]["venue"]["name"]%></h2>
 
 <p>
   <strong>Location:</strong>
@@ -26,17 +26,15 @@ puts "RESPONSE: #{response.body}" %>
 
 
 
-<% setlist = parsed_json["setlist"][0]["sets"]["set"][0]["song"]%> 
+<% setlist = data["setlist"][0]["sets"]["set"][0]["song"]%> 
 <h3>Setlist</h3>
-<%parsed_json["setlist"][0]["sets"]["set"].each do |set|%>
 <%for i in 0 ... setlist.length %>
   <ul>
-    <li class="song-list"><%="#{i + 1}. "%><%= parsed_json["setlist"][0]["sets"]["set"][0]["song"][i]["name"] %></li>
+    <li class="song-list"><%="#{i + 1}. "%><%= data["setlist"][0]["sets"]["set"][0]["song"][i]["name"] %></li>
   </ul>
 <%end%>
-<%end%>
 <p class="test">
-Source: <a href="<%=parsed_json["setlist"][0]["url"]%>" target="_blank" class="setlist">  setlist.fm </a>
+Source: <a href="<%=data["setlist"][0]["url"]%>" target="_blank" class="setlist">  setlist.fm </a>
 </p>
 <a href="/artists/<%=@artist.id%>/shows"><button>back</button></a>
 
