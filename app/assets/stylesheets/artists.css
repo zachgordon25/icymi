@@ -1,5 +1,6 @@
 a {
-  color: black; }
+  color: black;
+}
 
 img {
   height: 300px;
@@ -7,7 +8,8 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  outline: 1px solid gray; }
+  outline: 1px solid gray;
+}
 
 .flex-container {
   display: flex;
@@ -16,12 +18,14 @@ img {
   flex-wrap: wrap;
   flex-direction: row;
   height: 400px;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+}
 
 .card {
   margin-top: 20px;
   margin-bottom: 7px;
   border: 1px solid gray;
-  text-align: center; }
+  text-align: center;
+}
 
 /*# sourceMappingURL=artists.css.map */

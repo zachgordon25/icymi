@@ -86,3 +86,9 @@ div {
 label {
   display: block;
 }
+
+.setlist,
+.setlist:visited {
+  color: blue;
+  text-decoration: underline;
+}
