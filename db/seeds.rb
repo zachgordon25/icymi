@@ -39,10 +39,10 @@ Artist.create([
 
 Show.create([
   {
-    location:"New York, NY, USA",
-    date:"13-05-2019",
-    img:"https://2ab9pu2w8o9xpg6w26xnz04d-wpengine.netdna-ssl.com/wp-content/uploads/2019/01/the-who-moving-on-2019-tour-1200x628.jpg",
-    venue:"Madison Square Garden",
+    location:"London, England ",
+    date:"27-11-2000",
+    img:"https://images-na.ssl-images-amazon.com/images/I/61aFJBCIH%2BL.jpg",
+    venue:"Royal Albert Hall",
     artist_id:1
   },
   {
@@ -50,6 +50,27 @@ Show.create([
     date:"12-05-1979",
     img:"http://www.thewholive.net/bilder/cover/WHO_790512_cdfront.jpg",
     venue:"Arenes de Frejus",
+    artist_id:1
+  },
+  {
+    location:"New York, NY, USA",
+    date:"14-06-1974",
+    img:"https://upload.wikimedia.org/wikipedia/commons/f/f1/The_Who_%281974%29.png",
+    venue:"Madison Square Garden",
+    artist_id:1
+  },
+  {
+    location:"Columbus, OH, USA",
+    date:"11-12-2006",
+    img:"https://www.thewho.com/wp-content/uploads/2006/10/muisc-studio-album-1.jpg",
+    venue:"Value City Arena at the Schottenstein Center",
+    artist_id:1
+  },
+  {
+    location:"Biloxi, MS, USA",
+    date:"01-12-1982",
+    img:"https://28aauh39i9b83b3imx3n9t1k-wpengine.netdna-ssl.com/wp-content/uploads/2017/11/IMG_1048.jpg",
+    venue:"Mississippi Coast Coliseum",
     artist_id:1
   },
   {
@@ -64,6 +85,27 @@ Show.create([
     date:"29-08-2008",
     img:"http://s3.amazonaws.com/busites_www/kissonline/content/articles/kissalivee35.jpg",
     venue:"Pearl Concert Theater at Palms Casino Resort",
+    artist_id:2
+  },
+  {
+    location:"Tokyo, Japan",
+    date:"30-01-1995",
+    img:"http://images6.fanpop.com/image/photos/39100000/KISS-1995-kiss-39161649-792-1200.jpg",
+    venue:"Nippon Budokan",
+    artist_id:2
+  },
+  {
+    location:"Las Vegas, NV, USA",
+    date:"08-01-2015",
+    img:"http://1.bp.blogspot.com/-N9LReHG9GJ4/U5U2T3XrlbI/AAAAAAAAmQs/yFn_jWqXoEY/s1600/01.jpg",
+    venue:"The Joint at Hard Rock Hotel",
+    artist_id:2
+  },
+  {
+    location:"East Rutherford, NJ, USA",
+    date:"20-12-1987",
+    img:"https://upload.wikimedia.org/wikipedia/en/b/b3/Crazy_Nights_World_Tour_Picture.jpg",
+    venue:"Brendan Byrne Arena",
     artist_id:2
   },
   {
