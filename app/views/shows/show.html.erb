@@ -17,14 +17,14 @@ data = ActiveSupport::JSON.decode(response.body) %>
 
   <% sets = data["setlist"][0]["sets"]["set"] %>
   
-    <% for j in 0 ... sets.length %>
+    <% for j in 0 ... sets.length%>
       <% setlist = data["setlist"][0]["sets"]["set"][j]["song"] %> 
-        <% for i in 0 ... setlist.length %>
+        <% for i in 0 ... setlist.length%>
           <ul>
             <li class="song-list"><%= "#{i + 1}. "%><%= setlist[i]["name"] %></li>
           </ul>  
         <%end%>
-          <h5><%= sets.length > 1 ? "Encore" : nil %></h5>
+          <h5><%= sets.length > 1 && j == 0 ? "Encore" : nil %></h5>
     <% end %>
 
   <p>
