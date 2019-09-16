@@ -137,10 +137,10 @@ Show.create([
     artist_id:3
   },
   {
-    location:"Detroit, MI, USA",
-    date:"31-10-1986",
-    img:"https://m.media-amazon.com/images/I/81noeN8rTlL._SS500_.jpg",
-    venue:"Joe Louis Arena",
+    location:"Oslo, Norway",
+    date:"18-06-2004",
+    img:"https://alicecooper.com/wp-content/uploads/2019/01/The-Eyes-of-Alice-Cooper-768x733.jpg",
+    venue:"Oslo Spektrum",
     artist_id:3
   },
   {
@@ -158,6 +158,27 @@ Show.create([
     artist_id:4
   },
   {
+    location:"Buffalo, NY, USA",
+    date:"15-06-1975",
+    img:"https://images-na.ssl-images-amazon.com/images/I/51tT%2B9-yo9L._SY355_.jpg",
+    venue:"Buffalo Memorial Auditorium",
+    artist_id:4
+  },
+  {
+    location:"Toronto, ON, Canada",
+    date:"05-03-1977",
+    img:"https://i.ytimg.com/vi/rg8QWoolob0/maxresdefault.jpg",
+    venue:"El Mocambo",
+    artist_id:4
+  },
+  {
+    location:"Prague, Czech Republic",
+    date:"04-07-2018",
+    img:"https://pbs.twimg.com/media/D2QaohrXQAA2Yxb.jpg",
+    venue:"Letiste Praha Letnany",
+    artist_id:4
+  },
+  {
     location:"Tacoma, WA, USA",
     date:"15-10-1987",
     img:"https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Motley_Crue_Girls_Girls_Girls_Single.jpg/220px-Motley_Crue_Girls_Girls_Girls_Single.jpg",
@@ -169,6 +190,27 @@ Show.create([
     date:"31-12-2015",
     img:"https://alicecooper.com/wp-content/uploads/2014/01/FINAL_AD_MATwAC41.jpg",
     venue:"Staples Center",
+    artist_id:5
+  },
+  {
+    location:"New York, NY, USA",
+    date:"31-10-1983",
+    img:"https://i.pinimg.com/originals/38/6f/6f/386f6f6483eee8e8a7dd20edbbfc3b52.jpg",
+    venue:"The Limelight",
+    artist_id:5
+  },
+  {
+    location:"Morioka, Japan",
+    date:"16-11-2000",
+    img:"https://2.bp.blogspot.com/-A7SV4Q6nzpE/UJaD526AFJI/AAAAAAAABB8/Qc7bMiSbZGw/s1600/nt2.jpg",
+    venue:"Iwate Kenmin Kaikan",
+    artist_id:5
+  },
+  {
+    location:"Mackay, Australia",
+    date:"16-03-2013",
+    img:"http://lifemusicmedia.com/wp-content/uploads/2012/11/KissMC_.jpg",
+    venue:"Virgin Australia Stadium",
     artist_id:5
   },
   {
@@ -186,6 +228,27 @@ Show.create([
     artist_id:6
   },
   {
+    location:"Sparta, NJ, USA",
+    date:"14-07-1998",
+    img:"https://images-na.ssl-images-amazon.com/images/I/51okvS1lq5L._SY355_.jpg",
+    venue:"Sussex County Technical School",
+    artist_id:6
+  },
+  {
+    location:"Hallandale Beach, FL, USA",
+    date:"31-01-2004",
+    img:"https://chicagomusicguide.com/wp-content/uploads/2016/04/shandles_070204_benatar04.jpg",
+    venue:"Gulfstream Park",
+    artist_id:6
+  },
+  {
+    location:"Dubuque, IA, USA ",
+    date:"18-08-2011",
+    img:"http://ntgfan.tripod.com/2011logo-full.jpg",
+    venue:"Mississippi Moon Bar at Diamond Jo Casino",
+    artist_id:6
+  },
+  {
     location:"Pasadena, CA, USA",
     date:"03-10-1992",
     img:"https://upload.wikimedia.org/wikipedia/en/8/89/Use_your_illusion_92_tour.jpg",
@@ -197,6 +260,27 @@ Show.create([
     date:"15-07-2017",
     img:"https://assets.simpleviewinc.com/simpleview/image/upload/crm/wichita/64781968_10156776724418778_1526162396081553408_o0_f7969e8f-5056-a36a-07a382f45795070b.jpg",
     venue:"Park HaYarkon",
+    artist_id:7
+  },
+  {
+    location:"Osaka, Japan",
+    date:"21-07-2007",
+    img:"https://lastfm-img2.akamaized.net/i/u/ar0/901d1449ce954fc5cf1a694e1142cff9",
+    venue:"Intex Osaka",
+    artist_id:7
+  },
+  {
+    location:"Albany, NY, USA",
+    date:"21-10-1987",
+    img:"https://images-na.ssl-images-amazon.com/images/I/91ksS-ioRpL._SL1500_.jpg",
+    venue:"Palace Theatre",
+    artist_id:7
+  },
+  {
+    location:"Buenos Aires, Argentina",
+    date:"17-07-1993",
+    img:"https://img.discogs.com/WLQ5_A6PWgW5tkdunb74V-LDoCo=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-13670541-1558699116-3773.jpeg.jpg",
+    venue:"Estadio River Plate",
     artist_id:7
   }
 ])

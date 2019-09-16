@@ -46,8 +46,7 @@ nav {
   margin-left: 20px;
 }
 
-.flex-container,
-.all-concerts {
+.flex-container {
   display: flex;
   width: 90%;
   margin: auto;
@@ -62,6 +61,7 @@ nav {
   margin-bottom: 7px;
   border: 1px solid gray;
   text-align: center;
+  word-break: normal;
 }
 
 .song-list {

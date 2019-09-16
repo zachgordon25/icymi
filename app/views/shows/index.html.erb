@@ -16,18 +16,18 @@ require 'httparty'
 
 
 
-<% @shows.each do |show| %>
- <br>
+<div class="flex-container">
+    <% @shows.each do |show| %>
  
-    <div class="all-concerts">
-        <div class="concerts">
-        <a href="/artists/<%=@artist.id%>/shows/<%=show.id%>">
-    <h2><%= show.location %></h2>
-    <h3><%= show.date %></h3>
-    <img src="<%= show.img %>"></a>
-    </a>
-    </div>
-    </div>
+ 
+        <div class="card">
+            <a href="/artists/<%=@artist.id%>/shows/<%=show.id%>">
+        <h2><%= show.location %></h2>
+        <h3><%= show.date %></h3>
+        <img src="<%= show.img %>"></a>
+         </a>
+        </div>
     <% end %>
+</div>
     <%puts "The artist is #{@artist.name}"%>
     </div>
