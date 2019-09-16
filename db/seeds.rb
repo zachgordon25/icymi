@@ -195,14 +195,14 @@ Show.create([
   {
     location:"New York, NY, USA",
     date:"31-10-1983",
-    img:"https://i.pinimg.com/originals/38/6f/6f/386f6f6483eee8e8a7dd20edbbfc3b52.jpg",
+    img:"https://images-na.ssl-images-amazon.com/images/I/41XM8K7E97L.jpg",
     venue:"The Limelight",
     artist_id:5
   },
   {
     location:"Morioka, Japan",
     date:"16-11-2000",
-    img:"https://2.bp.blogspot.com/-A7SV4Q6nzpE/UJaD526AFJI/AAAAAAAABB8/Qc7bMiSbZGw/s1600/nt2.jpg",
+    img:"https://rockgod.co.nz/64f90400.jpg",
     venue:"Iwate Kenmin Kaikan",
     artist_id:5
   },
