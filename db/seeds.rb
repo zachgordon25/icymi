@@ -124,6 +124,27 @@ Show.create([
   },
   {
     location:"London, England",
+    date:"01-10-1991",
+    img:"https://townsquare.media/site/295/files/2016/06/AliceCooper.jpg?w=980&q=75",
+    venue:"Wembley Arena",
+    artist_id:3
+  },
+  {
+    location:"Phoenix, AZ, USA",
+    date:"18-05-2000",
+    img:"https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/Brutalplanet.jpg/220px-Brutalplanet.jpg",
+    venue:"Web Theatre",
+    artist_id:3
+  },
+  {
+    location:"Detroit, MI, USA",
+    date:"31-10-1986",
+    img:"https://m.media-amazon.com/images/I/81noeN8rTlL._SS500_.jpg",
+    venue:"Joe Louis Arena",
+    artist_id:3
+  },
+  {
+    location:"London, England",
     date:"14-12-1969",
     img:"https://upload.wikimedia.org/wikipedia/en/c/c0/LetitbleedRS.jpg",
     venue:"Saville Theatre",
