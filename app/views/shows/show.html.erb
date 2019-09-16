@@ -15,15 +15,14 @@ data = ActiveSupport::JSON.decode(response.body)%>
 
 <h2><%= data["setlist"][0]["venue"]["name"]%></h2>
 
-<p>
-  <strong>Location:</strong>
-  <%= @show.location %>
-</p>
-<p>
-  <strong>Date:</strong>
+<h6>
+  <%= data["setlist"][0]["venue"]["name"]%>, <%= @show.location %>
+</h6>
+<h6>
   <%= @show.date %>
-</p>
+</h6>
 
+<hr>
 
 <%sets = data["setlist"][0]["sets"]["set"]%>
 
