@@ -1,48 +1,34 @@
 <p id="notice"><%= notice %></p>
 
+<% require 'httparty' %>
+
+<% response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/setlists?artistName=#{@artist.name}&date=#{@show.date}&p=1&venueName=#{@show.venue}",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'})
+data = ActiveSupport::JSON.decode(response.body) %>
 
 
-<% 
-require 'httparty'
-%>
+<div class="container">
+  <h1><%= @artist.name %></h1>
+  <h2><%= data["setlist"][0]["venue"]["name"] %>, <%= @show.location %></h2>
+  <h3><%= @show.date %></h3>
 
-
-<%response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/setlists?artistName=#{@artist.name}&date=#{@show.date}&p=1&venueName=#{@show.venue}",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'})
-data = ActiveSupport::JSON.decode(response.body)%>
-<%-#puts "RESPONSE: #{response.body}" %>
-
-<h1><%=@artist.name%></h1>
-
-<h2><%= data["setlist"][0]["venue"]["name"]%></h2>
-
-<h6>
-  <%= data["setlist"][0]["venue"]["name"]%>, <%= @show.location %>
-</h6>
-<h6>
-  <%= @show.date %>
-</h6>
-
-<hr>
-
-<%sets = data["setlist"][0]["sets"]["set"]%>
+  <hr>
 
   <h3>Setlist</h3>
 
-  <%for j in 0 ... sets.length%>
-    <% setlist = data["setlist"][0]["sets"]["set"][j]["song"]%> 
-      <%for i in 0 ... setlist.length %>
-        <ul>
-          <li class="song-list"><%="#{i + 1}. "%><%= setlist[i]["name"] %></li>
-        </ul>  
-      <%end%>
-        <h5><%= sets.length > 1 ? "Encore" : nil %></h5>
-  <%end%>
+  <% sets = data["setlist"][0]["sets"]["set"] %>
+  
+    <% for j in 0 ... sets.length %>
+      <% setlist = data["setlist"][0]["sets"]["set"][j]["song"] %> 
+        <% for i in 0 ... setlist.length %>
+          <ul>
+            <li class="song-list"><%= "#{i + 1}. "%><%= setlist[i]["name"] %></li>
+          </ul>  
+        <%end%>
+          <h5><%= sets.length > 1 ? "Encore" : nil %></h5>
+    <% end %>
 
-
-  <%-#puts data["setlist"][0]["sets"]["set"][0]["song"]%>
-
-<p class="test">
-Source: <a href="<%=data["setlist"][0]["url"]%>" target="_blank" class="setlist">  setlist.fm </a>
-</p>
-<a href="/artists/<%=@artist.id%>/shows"><button>back</button></a>
-
+  <p>
+    Source: <a href="<%= data["setlist"][0]["url"] %>" target="_blank" class="setlist">setlist.fm</a>
+  </p>
+  <a href="/artists/<%= @artist.id %>/shows"> <button type="button" class="btn btn-primary">back</button> </a>
+</div>

@@ -1,18 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<div class= "container">
+<div class="container cover">
     <h1><big><strong>In Case You Missed It</strong></big></h1>
 
-    <div class= "flex-container">
+    <div class="flex-container">
     
-    <% @artists.sort_by{|artist| artist.name}.each do |artist| %>
-        <div class= "card">
-            <a href="/artists/<%=artist.id%>/shows"/>
-            <h2> <%=artist.name%> </h2>
-            <img src=<%=artist.img%> >
-            </a>
-        </div>
-            <%end%>
+        <% @artists.sort_by{|artist| artist.name}.each do |artist| %>
+            <div class="card">
+                <a href="/artists/<%= artist.id %>/shows">
+                    <h2> <%= artist.name %> </h2>
+                    <img src=<%= artist.img %> >
+                </a>
+            </div>
+        <% end %>
     </div>
 </div>
 

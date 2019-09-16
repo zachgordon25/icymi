@@ -1,27 +1,21 @@
 <p id="notice"><%= notice %></p>
     
-<% 
-require 'httparty'
-%>
+<div class="container">
 
-<div class= "container">
+    <nav>
+        <h1> <strong><%= @artist.name %></strong> </h1>
+        <a href="/artists"> <button type="button" class="btn btn-primary">back</button> </a>
+    </nav>
 
-<nav>
-<h1><strong><%= @artist.name %></strong></h1>
-<a href="/artists"><button type="button" class="btn btn-primary">back</button></a>
-</nav>
-
-
-
-<div class= "flex-container">
-    <% @shows.each do |show| %>
-        <div class= "card">
-        <a href="/artists/<%= @artist.id %>/shows/<%= show.id %>">
-            <h5><%= show.location %></h5>
-            <h6><%= show.date %></h6>
-            <img src=<%= show.img %> >
-        </a>
-        </div>
-    <% end %>
-</div>
+    <div class="flex-container">
+        <% @shows.each do |show| %>
+            <div class="card">
+                <a href="/artists/<%= @artist.id %>/shows/<%= show.id %>">
+                    <h5><%= show.location %></h5>
+                    <h6><%= show.date %></h6>
+                    <img src=<%= show.img %> >
+                </a>
+            </div>
+        <% end %>
     </div>
+</div>
