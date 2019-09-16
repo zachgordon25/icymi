@@ -5,6 +5,7 @@ class ArtistsController < ApplicationController
   # GET /artists.json
   def index
     @artists = Artist.all
+    render json: {status: 200, message: 'linked'}
   end
 
   # GET /artists/1
