@@ -1,8 +1,5 @@
 <p id="notice"><%= notice %></p>
     
-
-<%-# link_to 'Back', artists_path %>
-
 <% 
 require 'httparty'
 %>
@@ -16,18 +13,15 @@ require 'httparty'
 
 
 
-<div class="flex-container">
+<div class= "flex-container">
     <% @shows.each do |show| %>
- 
- 
-        <div class="card">
-            <a href="/artists/<%=@artist.id%>/shows/<%=show.id%>">
-        <h2><%= show.location %></h2>
-        <h3><%= show.date %></h3>
-        <img src="<%= show.img %>"></a>
-         </a>
+        <div class= "card">
+        <a href="/artists/<%= @artist.id %>/shows/<%= show.id %>">
+            <h5><%= show.location %></h5>
+            <h6><%= show.date %></h6>
+            <img src=<%= show.img %> >
+        </a>
         </div>
     <% end %>
 </div>
-    <%puts "The artist is #{@artist.name}"%>
     </div>
