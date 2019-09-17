@@ -22,7 +22,7 @@
     <% setlist = data["setlist"][0]["sets"]["set"][j]["song"] %> 
       <% for i in 0 ... setlist.length %>
         <ul>
-          <li class="song-list"><%= "#{i + 1}. "%><%= setlist[i]["name"] %></li>
+          <li class="song-list"><%= "#{i + 1}. " %><%= setlist[i]["name"] %></li>
         </ul>  
       <%end%>
         <h5><%= sets.length > 1 && j == 0 ? "Encore" : nil %></h5>
