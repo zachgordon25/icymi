@@ -18,17 +18,32 @@
   border: 1px solid red;
 } */
 
-.cover {
+.index {
   text-align: center;
+}
+
+.title {
+  margin-bottom: 40px;
+}
+
+.artists {
+  display: flex;
+  margin: auto;
+  height: 400px;
+  align-items: baseline;
+}
+
+.artist-image {
+  width: 50%;
+}
+
+.artist-name {
+  width: 30%;
 }
 
 a,
 a:hover {
   text-decoration: none;
-}
-
-.setlist {
-  color: blue;
 }
 
 img {
@@ -49,11 +64,6 @@ nav {
   margin-left: 20px;
 }
 
-.title {
-  margin-bottom: 40px;
-  /* text-decoration: underline; */
-}
-
 .flex-container {
   display: flex;
   width: 90%;
@@ -62,21 +72,6 @@ nav {
   flex-direction: row;
   height: 400px;
   justify-content: space-evenly;
-}
-
-.artists {
-  display: flex;
-  margin: auto;
-  height: 400px;
-  align-items: baseline;
-}
-
-.artist-image {
-  width: 50%;
-}
-
-.artist-name {
-  width: 30%;
 }
 
 .card {

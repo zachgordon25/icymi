@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container cover">
+<div class="container index">
     
     <h1 class="title"><big><strong>In Case You Missed It</strong></big></h1>
-
     
         <% @artists.sort_by{ |artist| artist.name }.each do |artist| %>
             <div class="artists">

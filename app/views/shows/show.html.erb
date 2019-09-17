@@ -7,6 +7,7 @@ data = ActiveSupport::JSON.decode(response.body) %>
 
 
 <div class="container">
+
   <h1><%= @artist.name %></h1>
   <h2><%= data["setlist"][0]["venue"]["name"] %>, <%= @show.location %></h2>
   <h3><%= @show.date %></h3>
@@ -28,7 +29,8 @@ data = ActiveSupport::JSON.decode(response.body) %>
   <% end %>
 
   <p>
-    Source: <a href="<%= data["setlist"][0]["url"] %>" target="_blank" class="setlist">setlist.fm</a>
+    Source: <a href="<%= data["setlist"][0]["url"] %>" target="_blank" class="setlist-fm">setlist.fm</a>
   </p>
   <a href="/artists/<%= @artist.id %>/shows"> <button type="button" class="btn btn-primary">back</button> </a>
+
 </div>
