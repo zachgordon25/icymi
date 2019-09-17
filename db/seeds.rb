@@ -31,10 +31,6 @@ Artist.create([
     "name": "Pat Benatar",
     "img": "https://artist-assets.hubbardradio.com/pat-benatar-1_v1000.jpg"
   },
-  # {
-  #   "name": "Guns N' Roses",
-  #   "img": "https://cdn.ontourmedia.io/gunsnroses/site_v2/animations/gnr_loop_logo_01.jpg"
-  # }
   {
     "name": "Guns N' Roses",
     "img": "https://pbs.twimg.com/profile_images/885491686327169024/ufh03Wmg_400x400.jpg"
