@@ -5,10 +5,10 @@
 
     <div class="flex-container">
     
-        <% @artists.sort_by{|artist| artist.name}.each do |artist| %>
+        <% @artists.sort_by{ |artist| artist.name }.each do |artist| %>
             <div class="card">
                 <a href="/artists/<%= artist.id %>/shows">
-                    <h2> <%= artist.name %> </h2>
+                    <h2><%= artist.name %></h2>
                     <img src=<%= artist.img %> >
                 </a>
             </div>

@@ -37,6 +37,7 @@ Artist.create([
   }
 ])
 
+
 Show.create([
   {
     location:"London, England ",
