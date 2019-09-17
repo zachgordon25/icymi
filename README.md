@@ -14,3 +14,7 @@ Do you ever want to know what you missed by not going to that concert? In Case Y
 - CSS 3
 - Setlist.fm API
 - Bootstrap
+
+![artists](app/assets/images/bands.png)
+![shows](app/assets/images/shows.png)
+![setlist](app/assets/images/setlist.png)
