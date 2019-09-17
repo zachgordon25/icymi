@@ -26,18 +26,21 @@
   margin-bottom: 40px;
 }
 
-.artists {
+.artists,
+.shows {
   display: flex;
   margin: auto;
   height: 400px;
   align-items: baseline;
 }
 
-.artist-image {
+.artist-image,
+.show-image {
   width: 50%;
 }
 
-.artist-name {
+.artist-name,
+.show-info {
   width: 30%;
 }
 
@@ -62,23 +65,6 @@ nav {
 
 .btn-primary {
   margin-left: 20px;
-}
-
-.flex-container {
-  display: flex;
-  width: 90%;
-  margin: auto;
-  flex-wrap: wrap;
-  flex-direction: row;
-  height: 400px;
-  justify-content: space-evenly;
-}
-
-.card {
-  margin-top: 20px;
-  margin-bottom: 7px;
-  border: 1px solid gray;
-  text-align: center;
 }
 
 .song-list {
