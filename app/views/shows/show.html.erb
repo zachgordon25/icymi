@@ -2,9 +2,9 @@
 
 <% require 'httparty' %>
 
-<% response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/setlists?artistName=#{@artist.name}&date=#{@show.date}&p=1&venueName=#{@show.venue}",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'})
-data = ActiveSupport::JSON.decode(response.body) %>
+<% response = HTTParty.get("https://api.setlist.fm/rest/1.0/search/setlists?artistName=#{@artist.name}&date=#{@show.date}&p=1&venueName=#{@show.venue}",headers: { 'x-api-key' => 'xlEeWdnKwBF9fBlUFjU40BOJV9xWkMswV40L', 'Accept' => 'application/json'}) %>
 
+<% data = ActiveSupport::JSON.decode(response.body) %>
 
 <div class="container">
 
