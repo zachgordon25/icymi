@@ -15,7 +15,12 @@
  */
 
 #artist-body {
-  background-image: linear-gradient(to right, black, red);
+  background-image: linear-gradient(to right, #000, #ff0000);
+  color: #fff;
+}
+
+.artists h1 {
+  color: #000;
 }
 
 .index {
@@ -41,7 +46,7 @@
 
 .artist-name,
 .show-info {
-  width: 30%;
+  width: 40%;
 }
 
 a,
