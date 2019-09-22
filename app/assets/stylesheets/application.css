@@ -20,7 +20,7 @@
 }
 
 .artists h1 {
-  color: #000;
+  color: #ff0;
 }
 
 .index {
@@ -46,7 +46,7 @@
 
 .artist-name,
 .show-info {
-  width: 50%;
+  width: 30%;
 }
 
 a,
