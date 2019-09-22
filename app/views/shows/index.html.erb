@@ -1,29 +1,33 @@
 <p id="notice"><%= notice %></p>
-    
-<div class="container index">
 
-    <nav class="title">
-        <h1> <strong><%= @artist.name %></strong> </h1>
-        <a href="/artists"> <button type="button" class="btn btn-primary">back</button> </a>
-    </nav>
+<body id="concert-body"> 
 
-    <% @shows.each do |show| %>
-        <div class="shows">
+    <div class="container index">
+
+        <nav class="title">
+            <h1> <strong><%= @artist.name %></strong> </h1>
+            <a href="/artists"> <button type="button" class="btn btn-primary">back</button> </a>
+        </nav>
+
+        <% @shows.each do |show| %>
+            <div class="shows">
             
-            <div class="show-image">
-                <a href="/artists/<%= @artist.id %>/shows/<%= show.id %>">
-                    <img src=<%= show.img %> >
-                </a>
-            </div>
+                <div class="show-image">
+                    <a href="/artists/<%= @artist.id %>/shows/<%= show.id %>">
+                        <img src=<%= show.img %> >
+                    </a>
+                </div>
 
-            <div class="show-info">
-                <a href="/artists/<%= @artist.id %>/shows/<%= show.id %>">
-                    <h5><%= show.location %></h5>
-                    <h6><%= show.date %></h6>
-                </a>
-            </div>
+                <div class="show-info">
+                    <a href="/artists/<%= @artist.id %>/shows/<%= show.id %>">
+                        <h5><%= show.location %></h5>
+                        <h6><%= show.date %></h6>
+                    </a>
+                </div>
 
-        </div>
-    <% end %>
+            </div>
+        <% end %>
     
-</div>
+    </div>
+
+</body>

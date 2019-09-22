@@ -14,6 +14,15 @@
  *= require_self
  */
 
+#artist-body {
+  background-image: linear-gradient(to right, #000, #ff0000);
+  color: #fff;
+}
+
+.artists h1 {
+  color: #000;
+}
+
 .index {
   text-align: center;
 }
@@ -37,7 +46,7 @@
 
 .artist-name,
 .show-info {
-  width: 30%;
+  width: 40%;
 }
 
 a,
@@ -51,6 +60,16 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   outline: 1px solid gray;
+  width: 300px;
+  height: 300px;
+}
+
+.artist-img {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  outline: 1px solid #000;
   width: 300px;
   height: 300px;
 }

@@ -1,26 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container index">
+<body id="artist-body">
+
+    <div class="container index">
     
-    <h1 class="title"><big><strong>In Case You Missed It</strong></big></h1>
+        <h1 class="title"><big><strong>In Case You Missed It</strong></big></h1>
     
-    <% @artists.sort_by{ |artist| artist.name }.each do |artist| %>
-        <div class="artists">
+        <% @artists.sort_by{ |artist| artist.name }.each do |artist| %>
+            <div class="artists">
                 
-            <div class="artist-image">
-                <a href="/artists/<%= artist.id %>/shows">
-                    <img src=<%= artist.img %> >
-                </a>
-            </div>
+                <div class="artist-image">
+                    <a href="/artists/<%= artist.id %>/shows">
+                        <img class="artist-img" src=<%= artist.img %> >
+                    </a>
+                </div>
             
-            <div class="artist-name">
-                <a href="/artists/<%= artist.id %>/shows">
-                    <h2><%= artist.name %></h2>
-                </a>
+                <div class="artist-name">
+                    <a href="/artists/<%= artist.id %>/shows">
+                        <h1><%= artist.name %></h1>
+                    </a>
+                </div>
+
             </div>
+        <% end %> 
 
-        </div>
-    <% end %> 
+    </div>
 
-</div>
-
+</body>

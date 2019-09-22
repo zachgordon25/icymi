@@ -6,31 +6,35 @@
 
 <% data = ActiveSupport::JSON.decode(response.body) %>
 
-<div class="container">
+<body id="setlist-body">
 
-  <h1><%= @artist.name %></h1>
-  <h2><%= data["setlist"][0]["venue"]["name"] %>, <%= @show.location %></h2>
-  <h3><%= @show.date %></h3>
+  <div class="container">
 
-  <hr>
+    <h1><%= @artist.name %></h1>
+    <h2><%= data["setlist"][0]["venue"]["name"] %>, <%= @show.location %></h2>
+    <h3><%= @show.date %></h3>
 
-  <h3>Setlist</h3>
+    <hr>
 
-  <% sets = data["setlist"][0]["sets"]["set"] %>
+    <h3>Setlist</h3>
+
+    <% sets = data["setlist"][0]["sets"]["set"] %>
   
-  <% for j in 0 ... sets.length %>
-    <% setlist = data["setlist"][0]["sets"]["set"][j]["song"] %> 
-      <% for i in 0 ... setlist.length %>
-        <ul>
-          <li class="song-list"><%= "#{i + 1}. " %><%= setlist[i]["name"] %></li>
-        </ul>  
-      <%end%>
-        <h5><%= sets.length > 1 && j == 0 ? "Encore" : nil %></h5>
-  <% end %>
+    <% for j in 0 ... sets.length %>
+      <% setlist = data["setlist"][0]["sets"]["set"][j]["song"] %> 
+        <% for i in 0 ... setlist.length %>
+          <ul>
+            <li class="song-list"><%= "#{i + 1}. " %><%= setlist[i]["name"] %></li>
+          </ul>  
+        <%end%>
+          <h5><%= sets.length > 1 && j == 0 ? "Encore" : nil %></h5>
+    <% end %>
 
-  <p class="source">
-    Source: <a href="<%= data["setlist"][0]["url"] %>" target="_blank" class="setlist-fm">setlist.fm</a>
-  </p>
-  <a href="/artists/<%= @artist.id %>/shows"> <button type="button" class="btn btn-primary">back</button> </a>
+    <p class="source">
+      Source: <a href="<%= data["setlist"][0]["url"] %>" target="_blank" class="setlist-fm">setlist.fm</a>
+    </p>
+    <a href="/artists/<%= @artist.id %>/shows"> <button type="button" class="btn btn-primary">back</button> </a>
 
-</div>
+  </div>
+
+</body>
