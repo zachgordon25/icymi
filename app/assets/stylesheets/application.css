@@ -102,8 +102,9 @@ nav {
 
 .btn-outline:hover {
   border-color: #891d14;
-  color: #891d14;
-  background-color: transparent;
+  background-color: #891d14;
+  /* color: #aaa835; */
+  color: #9b9933;
 }
 
 .song-list {
