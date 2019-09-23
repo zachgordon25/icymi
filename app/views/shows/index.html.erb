@@ -18,7 +18,7 @@
             
                 <div class="show-image">
                     <a href="/artists/<%= @artist.id %>/shows/<%= show.id %>">
-                        <img src=<%= show.img %> alt=<%= show.location %> >
+                        <img class="concert-img" src=<%= show.img %> alt=<%= show.location %> >
                     </a>
                 </div>
 
@@ -32,6 +32,6 @@
             </div>
         <% end %>
     
+        <a href="/artists"> <button type="button" class="btn btn-outline">back</button> </a>
     </div>
-
 </body>

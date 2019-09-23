@@ -58,12 +58,12 @@ a:hover {
   text-decoration: none;
 }
 
-img {
+.concert-img {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  outline: 1px solid #000;
+  outline: 1px solid #5c5b1f;
   width: 300px;
   height: 300px;
 }
@@ -84,6 +84,17 @@ nav {
 
 .btn-primary {
   margin-left: 20px;
+}
+
+.btn-outline {
+  border-color: #000;
+  color: #000;
+}
+
+.btn-outline:hover {
+  border-color: #851d15;
+  color: #851d15;
+  background-color: transparent;
 }
 
 .song-list {
