@@ -4,24 +4,28 @@
 
     <div class="container index">
 
+        <% if false %>
         <nav class="title">
-            <h1> <strong><%= @artist.name %></strong> </h1>
-            <a href="/artists"> <button type="button" class="btn btn-primary">back</button> </a>
+        <a href="/artists"> <button type="button" class="btn btn-primary">back</button> </a>
         </nav>
+        <% end %>
+        
+        <h1 class="title"><strong><%= @artist.name %></strong></h1>
+        
 
         <% @shows.each do |show| %>
             <div class="shows">
             
                 <div class="show-image">
                     <a href="/artists/<%= @artist.id %>/shows/<%= show.id %>">
-                        <img src=<%= show.img %> >
+                        <img src=<%= show.img %> alt=<%= show.location %> >
                     </a>
                 </div>
 
                 <div class="show-info">
                     <a href="/artists/<%= @artist.id %>/shows/<%= show.id %>">
-                        <h5><%= show.location %></h5>
-                        <h6><%= show.date %></h6>
+                        <h2><%= show.location %></h2>
+                        <h3><%= show.date %></h3>
                     </a>
                 </div>
 
