@@ -31,6 +31,10 @@
   margin-bottom: 40px;
 }
 
+#concert-body {
+  background-image: linear-gradient(to right, #000, #ff0);
+}
+
 .artists,
 .shows {
   display: flex;
