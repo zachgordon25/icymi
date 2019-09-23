@@ -89,7 +89,6 @@ nav {
 .btn-outline {
   border-color: #000;
   color: #000;
-  padding: 20px 36px;
 }
 
 .btn-outline:hover {
@@ -107,17 +106,5 @@ nav {
   .artist-name,
   .show-info {
     width: 30%;
-  }
-
-  .btn-outline {
-    border-color: #000;
-    color: #000;
-    padding: 6px 12px;
-  }
-
-  .btn-outline:hover {
-    border-color: #851d15;
-    color: #851d15;
-    background-color: transparent;
   }
 }
