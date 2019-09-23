@@ -68,6 +68,15 @@ a:hover {
   height: 300px;
 }
 
+#concert-body h1 {
+  color: #000;
+}
+
+.show-info h2,
+h3 {
+  color: #891d14;
+}
+
 .artist-img {
   position: relative;
   background-position: center;
@@ -92,8 +101,8 @@ nav {
 }
 
 .btn-outline:hover {
-  border-color: #851d15;
-  color: #851d15;
+  border-color: #891d14;
+  color: #891d14;
   background-color: transparent;
 }
 
