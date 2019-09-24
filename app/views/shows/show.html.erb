@@ -10,13 +10,13 @@
 
   <div class="container">
 
-    <h1><%= @artist.name %></h1>
-    <h2><%= data["setlist"][0]["venue"]["name"] %>, <%= @show.location %></h2>
-    <h3><%= @show.date %></h3>
+    <h1 id="name"><%= @artist.name %></h1>
+    <h2 id="location"><%= data["setlist"][0]["venue"]["name"] %>, <%= @show.location %></h2>
+    <h3 id="date"><%= @show.date %></h3>
 
     <hr>
 
-    <h3>Setlist</h3>
+    <h3 class="sets">Setlist</h3>
 
     <% sets = data["setlist"][0]["sets"]["set"] %>
   
@@ -27,7 +27,7 @@
             <li class="song-list"><%= "#{i + 1}. " %><%= setlist[i]["name"] %></li>
           </ul>  
         <%end%>
-          <h5><%= sets.length > 1 && j == 0 ? "Encore" : nil %></h5>
+          <h5 class="sets"><%= sets.length > 1 && j == 0 ? "Encore" : nil %></h5>
     <% end %>
 
     <p class="source">

@@ -72,8 +72,8 @@ a:hover {
   color: #000;
 }
 
-.show-info h2,
-h3 {
+.index-location,
+.index-date {
   color: #891d14;
 }
 
@@ -87,8 +87,8 @@ h3 {
   height: 300px;
 }
 
-nav {
-  display: flex;
+#setlist-body {
+  background-image: linear-gradient(to right, #000, #0000ff);
 }
 
 .btn-primary {
@@ -107,9 +107,20 @@ nav {
   color: #9b9933;
 }
 
+#name,
+#location,
+#date {
+  color: #008000;
+}
+
+.sets {
+  color: #cf8702;
+}
+
 .song-list {
   list-style-type: none;
   font-size: 18px;
+  color: #ff0;
 }
 
 @media (min-width: 500px) {
