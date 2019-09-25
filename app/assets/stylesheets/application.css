@@ -91,16 +91,16 @@ a:hover {
   background-image: linear-gradient(to right, #000, #0000ff);
 }
 
-.btn-primary {
+#to-concerts {
   margin-left: 20px;
 }
 
-.btn-outline {
+#to-artists {
   border-color: #000;
   color: #000;
 }
 
-.btn-outline:hover {
+#to-artists:hover {
   border-color: #891d14;
   background-color: #891d14;
   /* color: #aaa835; */
@@ -113,6 +113,10 @@ a:hover {
   color: #008000;
 }
 
+hr {
+  background-color: red;
+}
+
 .sets {
   color: #cf8702;
 }
@@ -121,6 +125,18 @@ a:hover {
   list-style-type: none;
   font-size: 18px;
   color: #ff0;
+}
+
+#to-concerts {
+  border-color: #ff0;
+  color: #ff0;
+}
+
+#to-concerts:hover {
+  border-color: #008000;
+  background-color: #008000;
+  /* color: #aaa835; */
+  color: #000321;
 }
 
 @media (min-width: 500px) {
