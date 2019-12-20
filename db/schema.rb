@@ -22,15 +22,6 @@ ActiveRecord::Schema.define(version: 2019_09_14_200853) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "concert_infos", force: :cascade do |t|
-    t.string "artist_name"
-    t.string "city"
-    t.string "venue"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "event"
-  end
-
   create_table "shows", force: :cascade do |t|
     t.string "location"
     t.string "date"
